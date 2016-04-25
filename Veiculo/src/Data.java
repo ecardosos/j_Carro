@@ -1,15 +1,15 @@
 
 public class Data 
 {	
-	  private int dia;
-	  private int mes;
-	  private int ano;
+	  private int _dia;
+	  private int _mes;
+	  private int _ano;
 	  
 	  Data(int d, int m, int a)
 	  {
-		 dia = d;
-		 mes = m;
-		 ano = a;
+		 _dia = d;
+		 _mes = m;
+		 _ano = a;
 	  }
 
 	  public int validacaoData(int dia) 
@@ -19,30 +19,33 @@ public class Data
 	  
 	  void setDia(int diaIn) 
 	  { 
-		  dia = validacaoData(diaIn);
+		  _dia = validacaoData(diaIn);
 	  }
 	  
 	  void setMes(int mesIn)
 	  { 
-		  if (mesIn >= 1 && mesIn <= 12) mes = mesIn;
+		  if (mesIn >= 1 && mesIn <= 12) 
+			  _mes = mesIn;
 	  }
+	  
 	  void setAno(int anoIn)
 	  { 
-		  if (anoIn >= 0) ano = anoIn; 
+		  if (anoIn >= 0) 
+			  _ano = anoIn; 
 	  }
 
 	  int getDia()
 	  {
-		  return dia;
+		  return _dia;
 	  }
 	  
 	  int getMes()
 	  {
-		  return mes;
+		  return _mes;
 	  }
 	  
 	  int getAno( )
 	  {
-		  return ano;
+		  return _ano;
 	  }
 }
