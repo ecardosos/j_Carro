@@ -1,7 +1,9 @@
-import java.io.IOException;
+import java.util.Scanner;
 
 public final class Metro extends Veiculo implements VeiculoTransportePassageiros
 {
+	Scanner in = new Scanner(System.in);
+	
 	 private int _primeiraClasse;
 	 private int _comAcSegundaClasse;
 	 private int _semAcSegundaClasse;
@@ -34,38 +36,40 @@ public final class Metro extends Veiculo implements VeiculoTransportePassageiros
 		_velocidade = 0;
 	}
 	
-	public void adicionarCreditos(PassagemMetro p)
+	public void adicionarCreditos()
 	{
-		float creditos = 0.0f;
-		System.out.println("Insira a quantidade de créditos:");
-		//System.in.close(Credits);
+		float creditos;
 		
-		p.adicionarCreditos(creditos);
+		PassagemMetro passagem = new PassagemMetro();
+		
+		System.out.println("Insira a quantidade de créditos:");
+		creditos = in.nextFloat();
+		
+		passagem.adicionarCreditos(creditos);
+		
+		System.out.println("O seu ID é: " + passagem.getId());
 	}
 
-	public void comprarPassagem(PassagemMetro p) 
+	@Override
+	public void comprarPassagem()
 	{
-	  int cod = 0;
-	  System.out.println("Olá,");
-	  System.out.println("Digite 1 se você deseja utilizar um ticket.");
-	  System.out.println("Digite 2 se você deseja adicionar créditos.");
-	  
-	  switch(cod)
-	  {
-	  case 1:
-	    p.isAvulso();
-	    break;
-
-	  case 2:
-	    p.deduzirCreditos(_valPassagem);
-	    break;
-	  }
+	   PassagemMetro passagem = new PassagemMetro();
+	   int id;
+	   System.out.println("digite o seu ID:");
+	   id = in.nextInt();
+	   
+	   passagem.deduzirCreditos(_valPassagem);
 	}
-
 
 	@Override
 	public int getCapacidade() 
 	{
 		return _primeiraClasse + _comAcSegundaClasse + _semAcSegundaClasse;
+	}
+	
+	public void proximaEstacao(String proximaEstacao)
+	{
+		
+		System.out.println("Próxima estação... " + proximaEstacao);
 	}
 }

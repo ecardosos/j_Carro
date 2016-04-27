@@ -1,6 +1,7 @@
 
 public final class OnibusInterurbano extends Veiculo implements VeiculoTransportePassageiros
 {
+	
 	private int _numAssentos;
 	
 	OnibusInterurbano()
@@ -30,4 +31,12 @@ public final class OnibusInterurbano extends Veiculo implements VeiculoTransport
 	{
 		return _numAssentos;
 	}
+
+	@Override
+	public void comprarPassagem()
+	{
+		
+	}
+	
+	
 }
