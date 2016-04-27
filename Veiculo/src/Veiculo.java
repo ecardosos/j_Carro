@@ -6,6 +6,14 @@ public abstract class Veiculo
 	  String _cor;
 	  Pessoa _nome;
 	  
+	  Veiculo(Veiculo veiculo)
+	  {
+		_velocidade = veiculo._velocidade;
+		_velocidadeMax = veiculo._velocidadeMax;
+		_cor = veiculo._cor;
+		_nome = veiculo._nome;
+	  }
+	  
 	  Veiculo()
 	  {
 		_velocidade = 0;

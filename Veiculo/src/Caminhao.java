@@ -5,6 +5,13 @@ public final class Caminhao extends Veiculo implements VeiculoTransporteCarga
 	  private int _numContainers;
 	  private int _comprimento;
 	
+	  Caminhao(Caminhao caminhao)
+	  {
+		  _numContainers = caminhao._numContainers;
+		  _capacidadeMax = caminhao._capacidadeMax;
+		  _comprimento = caminhao._comprimento;
+	  }
+	  
 	  Caminhao()
 	  {
 		  _numContainers = 0;

@@ -9,6 +9,12 @@ public final class OnibusInterurbano extends Veiculo implements VeiculoTransport
 		_numAssentos = 0;
 	}
 	
+	OnibusInterurbano(OnibusInterurbano onibus)
+	{
+		_numAssentos = onibus._numAssentos;
+	}
+	
+	
 	OnibusInterurbano(int numAssentos)
 	{
 		_numAssentos = numAssentos;

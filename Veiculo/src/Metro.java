@@ -10,6 +10,13 @@ public final class Metro extends Veiculo implements VeiculoTransportePassageiros
 	 
 	 private static float _valPassagem = 5.5f;
 	 
+	 Metro(Metro metro)
+		{
+			_primeiraClasse = metro._primeiraClasse;
+			_comAcSegundaClasse = metro._comAcSegundaClasse;
+			_semAcSegundaClasse = metro._semAcSegundaClasse;
+		}
+	 
 	Metro()
 	{
 		_primeiraClasse = 0;

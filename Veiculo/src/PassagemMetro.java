@@ -5,6 +5,12 @@ public class PassagemMetro
 	private int _idCartao;
 	private float _creditos;
 	
+	PassagemMetro(PassagemMetro passagem)
+	{
+	  _idCartao = passagem._idCartao;
+	  _creditos = passagem._creditos;
+	}
+	
 	PassagemMetro()
 	{
 	  _idCartao = s_numCartoes;
