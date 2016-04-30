@@ -1,6 +1,5 @@
 
 public interface VeiculoTransporteCarga
 {
-	  float getCapacidade();
-	  float getComprimento();
+	  void carregarProdutos(Produto produto);
 }

@@ -1,7 +1,6 @@
 
 public interface VeiculoTransportePassageiros 
 {
-	int getCapacidade();
-	void comprarPassagem();
-	
+	void adicionarPassageiros();
+	void comprarPassagem();	
 }

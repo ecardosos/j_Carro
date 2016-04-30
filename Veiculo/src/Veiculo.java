@@ -30,15 +30,9 @@ public abstract class Veiculo
 		  _nome = new Pessoa();
 	  }
 	  
-	  public void aceleracao()
-	  {
-		  
-	  }
+	  public abstract void aceleracao();
 	  
-	  public void freio()
-	  {
-		  
-	  }
+	  public abstract void freio();
 	  
 	  public float getVelocidade()
 	  {

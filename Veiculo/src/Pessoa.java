@@ -16,11 +16,6 @@ public class Pessoa
 		_dataDeNascimento = dataNascimento;
 	}
 	
-	public void setNome(String n)
-	{
-		_nome = n;
-	}
-	
 	public String getNome()
 	{
 		return _nome;
